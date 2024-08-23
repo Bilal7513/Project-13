@@ -60,7 +60,7 @@ h1 button#clear-card {
     height: 100%;
     width: 100%;
     transform: translateX(50%) rotateY(-10deg);
-    transition: transform 0.8s ease, opacity 0.8 ease;
+    transition: transform 0.8s ease, opacity 0.8s ease;
 }
 
 .card.left {
@@ -177,4 +177,52 @@ textarea {
     padding: 10px;
     min-width: 500px;
     max-width: 100%;
+}
+
+@media (max-width: 500px){
+    h1 {
+        font-size: 25px;
+        margin-right: 50px;
+        width: 65%;
+    }
+    
+    h1 button#add-card{
+        font-size: 15px;
+        right: 40px;
+    }
+    h1 button#clear-card {
+        font-size: 15px;
+        right: 0;
+    }
+    textarea{
+        min-width: 275px;
+    }
+    .cards-container{
+        width: 275px;
+    }
+    .card.left {
+        transform: translateX(10%) rotateY(10deg);
+    }
+    
+    .card.right {
+        transform: translateX(-10%) rotateY(10deg);
+    }
+    .add-card-container h1 {
+        font-size: 25px;
+        width: 70%;
+    }
+    button#cancel-btn {
+        font-size: 15px;
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 900px){
+    .card.left {
+        transform: translateX(30%) rotateY(10deg);
+    }
+    
+    .card.right {
+        transform: translateX(-30%) rotateY(10deg);
+    }
 }
